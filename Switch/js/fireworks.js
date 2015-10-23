@@ -316,7 +316,7 @@ Particle.prototype = {
 
       // context.fillStyle = "hsl(" + Math.round(c * 3.6) + ",100%,60%)"
 context.font="250% century";
-    context.fillText("Sharu",x-50,y+10);
+    context.fillText("Switch",x-50,y+10);
 
     // draw in the images
     context.drawImage(fireworkCanvas,
