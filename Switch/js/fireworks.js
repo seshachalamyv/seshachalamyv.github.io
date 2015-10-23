@@ -92,6 +92,10 @@ var Fireworks = (function() {
 
       fireworkContext.fillStyle = "hsl(" + Math.round(c * 3.6) + ",100%,60%)";
       fireworkContext.fillRect(gridX, gridY, gridSize, gridSize);
+      
+
+
+
       fireworkContext.drawImage(
         Library.bigGlow,
         gridX,
@@ -309,6 +313,10 @@ Particle.prototype = {
     context.lineTo(this.pos.x - 1.5, this.pos.y);
     context.closePath();
     context.fill();
+
+      // context.fillStyle = "hsl(" + Math.round(c * 3.6) + ",100%,60%)"
+context.font="250% century";
+    context.fillText("Sharu",x-50,y+10);
 
     // draw in the images
     context.drawImage(fireworkCanvas,
