@@ -92,7 +92,8 @@ var Fireworks = (function() {
 
       fireworkContext.fillStyle = "hsl(" + Math.round(c * 3.6) + ",100%,60%)";
       fireworkContext.fillRect(gridX, gridY, gridSize, gridSize);
-      
+       fireworkContext.fillStyle = "blue";
+      fireworkContext.fillText("Happy Diwali",300,300);
 
 
 
