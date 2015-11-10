@@ -69,6 +69,10 @@ var Fireworks = (function() {
     fireworkCanvas = document.createElement('canvas');
     fireworkContext = fireworkCanvas.getContext('2d');
 
+    imageObj.onload = function() {
+        mainContext.drawImage(imageObj, 69, 50);
+      };
+      imageObj.src = 'http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg';
   
 
 
@@ -170,7 +174,7 @@ var Fireworks = (function() {
 
         // kill off the firework, replace it
         // with the particles for the exploded version
-        particles.splice(a, 2);
+        particles.splice(a, 1);
 
         // if the firework isn't using physics
         // then we know we can safely(!) explode it... yeah.

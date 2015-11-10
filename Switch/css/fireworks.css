@@ -12,5 +12,5 @@ html, body {
 }
 
 canvas {
-  -webkit-transform: translateZ(20);
+  -webkit-transform: translateZ(0);
 }
