@@ -69,10 +69,6 @@ var Fireworks = (function() {
     fireworkCanvas = document.createElement('canvas');
     fireworkContext = fireworkCanvas.getContext('2d');
 
-    imageObj.onload = function() {
-        mainContext.drawImage(imageObj, 69, 50);
-      };
-      imageObj.src = 'http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg';
   
 
 
