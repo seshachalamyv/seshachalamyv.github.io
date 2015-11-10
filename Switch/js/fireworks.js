@@ -19,6 +19,25 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+var app=angular.module('myApp',[])
+var na=""
+app.config(function($routeProvider){
+  $routeProvider.when("/:s",
+    {
+      templateUrl: "temp/hello.html",
+      controller: "AppCtrl",
+      
+    })
+
+});
+
+app.controller('AppCtrl', function($scope,$routeParams) {
+  $scope.nn=$routeParams.s;
+  na=$scope.nn
+});
+
+
+
 
 var Fireworks = (function() {
 
@@ -42,11 +61,16 @@ var Fireworks = (function() {
     // create a canvas for the fireworks
     mainCanvas = document.createElement('canvas');
     mainContext = mainCanvas.getContext('2d');
+    var imageObj = new Image();
 
+      
     // and another one for, like, an off screen buffer
     // because that's rad n all
     fireworkCanvas = document.createElement('canvas');
     fireworkContext = fireworkCanvas.getContext('2d');
+
+  
+
 
     // set up the colours for the fireworks
     createFireworkPalette(12);
@@ -146,7 +170,7 @@ var Fireworks = (function() {
 
         // kill off the firework, replace it
         // with the particles for the exploded version
-        particles.splice(a, 1);
+        particles.splice(a, 2);
 
         // if the firework isn't using physics
         // then we know we can safely(!) explode it... yeah.
@@ -315,8 +339,8 @@ Particle.prototype = {
     context.fill();
 
       // context.fillStyle = "hsl(" + Math.round(c * 3.6) + ",100%,60%)"
-context.font="12pt Century Gothic, CenturyGothic";
-    context.fillText("Switch",x-45,y+10);
+context.font="15pt Century Gothic, CenturyGothic";
+    context.fillText(na,x-45,y+10);
 
     // draw in the images
     context.drawImage(fireworkCanvas,

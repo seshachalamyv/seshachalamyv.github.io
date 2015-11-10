@@ -1,36 +1,60 @@
 <!DOCTYPE html public "display of affection from creativejs">
+  <html ng-app="myApp">
   <head>
     <meta charset="uft-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Switch!!!</title>
-    <link href="css/fireworks.css" rel="stylesheet">
+    <script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-ui-router.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
 
+    <title>Switch!!!</title>
+   
+    <link href="css/fireworks.css" rel="stylesheet">
+<script type="text/javascript" src="js/app1.js"></script>
 
     <style type="text/css">
+    
 #h{
 
 vertical-align: center;
 margin:center;
 font-family: Century Gothic, CenturyGothic;
 color: white;
-font-size: 70px;
+font-size: 75px;
+
 }
-#ha{
-font-size: 30px;
+  
+  #by{
+    font-size: 15px;
+ 
+    font-family: Century Gothic, CenturyGothic;
+
+color:white;
+
+  }
+#n{
+  font-size: 50px;
+  font-family: Century Gothic, CenturyGothic;
+
+color:white;
+
+}
+
+#ha,#d {
+font-size:25px;
+display: inline;
 font-family: Century Gothic, CenturyGothic;
 
 color:white;
 
 }
     </style>
-<div id="h">
-<center>  Switch Me
-  <div id="ha">
-Happy Diwali
-  </div>
-</center>
 
-</div>
+  <div id="d" ng-view>
+   
+   </div> 
+
+
   </head>
   <!--
   I love including these comments in pages. It pleases me that
@@ -55,7 +79,15 @@ Happy Diwali
       <img src="images/big-glow.png" id="big-glow" />
       <img src="images/small-glow.png" id="small-glow" />
     </aside>
+
+
   </body>
+
+<div ng-templates="temp/p.html"id="ha">
+</div> 
   <script src="js/requestanimframe.js"></script>
   <script src="js/fireworks.js"></script>
+
+
+
 </html>
